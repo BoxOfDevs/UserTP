@@ -6,7 +6,7 @@ Commands
 =========
 All the commands currently in UserTP:
 
-    - /utp invite|ask|accept|decline : Let's a user invite another player to them, ask to teleport to another player, and then accept or deny these requests
+    - /utp invite|ask|accept|decline <player> : Let's a user invite another player to them, ask to teleport to another player, and then accept or deny these requests
 
     - /uptall here|player|<x> <y> <z> : Let's you teleport all players either to you, to another player, or to specified XYZ coordinates
 
