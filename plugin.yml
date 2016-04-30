@@ -13,7 +13,7 @@ main: UserTP\Main
 load: STARTUP
 commands:
     utp:
-        usage: "/utp invite|ask|accept|decline"
+        usage: "/utp invite|ask|accept|decline <player>"
         description: "Let's a user invite another player to them, ask to teleport to another player, and then accept or deny these requests"
         permission: usertp.command.main
     utpall:
