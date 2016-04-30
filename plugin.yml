@@ -2,10 +2,32 @@ name: UserTP
 author: BoxOfDevs Team
 authors:
 - TheDragonRing
+- Riegert
+- Ad5001
 version: 1.0.0
-description: 
+description: A plugin with TPA-like features
 api:
-- 1.0.0
+- 1.14.2
 - 2.0.0
 main: UserTP\Main
 load: STARTUP
+commands:
+    utp:
+        usage: "/utp invite|ask|accept|decline"
+        description: "Let's a user invite another player to them, ask to teleport to another player, and then accept or deny these requests"
+        permission: usertp.command.main
+    utpall:
+        usage: "/uptall here|player|<x> <y> <z>"
+        description: "Let's you teleport all players either to you, to another player, or to specified XYZ coordinates"
+        permission: usertp.command.all
+permissions:
+    usertp:
+        default: false
+        children:
+            usertp.command:
+            default: false
+            children:
+                usertp.command.main:
+                    default: true
+                usertp.command.all:
+                    default: op
