@@ -12,14 +12,22 @@ api:
 main: UserTP\Main
 load: STARTUP
 commands:
-    utp:
-        usage: "/utp invite|ask|accept|decline <player>"
+    tpa:
+        usage: "/tpa invite|ask|accept|decline <player>"
         description: "Let's a user invite another player to them, ask to teleport to another player, and then accept or deny these requests"
         permission: usertp.command.main
-    utpall:
-        usage: "/uptall here|player|<x> <y> <z>"
+    tpaall:
+        usage: "/tpaall invite|ask"
         description: "Let's you teleport all players either to you, to another player, or to specified XYZ coordinates"
-        permission: usertp.command.all
+        permission: usertp.command.tpaall
+   tpo:
+        usage: "/tpo here|to <player>"
+        description: "Teleport to a player or teleport him to you"
+        permission: usertp.command.mainoblication
+   tpoall:
+        usage: "/tpoall here|to "
+        description: "Teleport to a player or teleport him to you"
+        permission: usertp.command.alloblication
 permissions:
     usertp:
         default: false
@@ -29,5 +37,9 @@ permissions:
             children:
                 usertp.command.main:
                     default: true
-                usertp.command.all:
+                usertp.command.tpaall:
+                    default: true
+                usertp.command.mainoblication:
+                    default: op
+                usertp.command.alloblication:
                     default: op
